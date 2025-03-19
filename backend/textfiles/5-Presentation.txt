@@ -1,0 +1,92 @@
+I have response of LLM model.
+
+I want you to check 2 metrics: Presentation and Up to date.
+
+Following are the guidelines  for Presentation and Up to date:
+
+To score this dimension
+Step 1: Identify all implicit formatting rules that this response must adhere to.
+Step 2: Identify the rules from step 1 that the response failed to follow, and rules from step 1 that the response satisfies. Please record these rules in the dissatisfied_contraints and satisfied_constraints fields.
+Step 3: Compute the percentage of the issues and assign a score based on the scale above. For example, if there are 10 formatting rules that the response needed to follow, but the response didn’t meet 2 rules. This is 20% issues, and we can give this response score 4. 
+
+Presentation rules for code output:
+1. Use a professional tone.
+2. For prompts with simple answers, prefer a concise response and consider bolding relevant information.
+3. For prompts with complex answers, provide a well-formatted, detailed response using markdown formatting with appropriate headers.
+4. For prompts with multiple instructions, be sure to follow all of them, breaking your response into separate sections as necessary.
+5. Use numbered or bulleted lists instead of paragraphs.
+6. For code blocks, always provide a language tag and use up-to-date libraries and packages.
+7. Avoid adding a title to the entire response unless it provides essential context or clarity.
+8. Consolidate code blocks to minimize the number of chunks, reducing the need for multiple copy-paste actions. Group related code into fewer, cohesive blocks.
+9. Ensure comments are informative and helpful, providing enough detail to be useful without being overly verbose.
+10. Provide detailed explanations of changes and improvements. Use bullet points for clarity in post-code explanations.
+11. Use header styles (e.g., ###) for section titles to improve readability and consistency. Remove unnecessary or redundant titles.
+12. Include helpful visual elements, such as charts, to enhance understanding. Ensure all visual references are correctly linked and functional.
+13. Use bullet points instead of unnecessary numbering in lists where order is not important. Simplify nested lists to avoid complexity.
+14. Address any formatting errors, such as broken code blocks or unnecessary spaces. Use consistent code comments to highlight changes or important sections.
+15. Remove unnecessary introductory titles and ensure the introduction is concise. Consider adding a brief outro to summarize key points or next steps.
+16. Ensure documentation sections are correctly formatted and do not cause markdown issues. Avoid lengthy or repetitive information.
+17. Maintain consistency in style, using headers for section titles and avoiding mixed styles. Ensure the response is visually appealing and easy to parse by breaking it into sections where necessary.
+ 
+
+For above rules you have to check all constraints. 
+You have give in total 9-11 constraints for Presentation only in total  
+Dissatisfied constraints can be none if all rules are satisfied.
+
+Give me 
+
+Satisfied constraints:
+
+Dissatisfied Contraints:
+
+
+Now for up to date:
+
+Following are the guidelines for up to date:
+
+Up-to-date (code does not use any deprecated libraries; code uses most fresh functions available to solve problem efficiently) 
+Check for both satisfied and Dissatisfied Contraints:
+
+
+Now provide me like this:
+
+PRESENTATION:
+Satisfied Constraints:
+
+Constraint 1
+Constraint 2
+Constraint 3
+Constraint 4
+Constraint 5
+Constraint 6
+Constraint 7
+
+
+Dissatisfied Constraints:
+
+Constraint 1
+Constraint 2
+Constraint 3
+Constraint 4
+
+
+
+Up to date:
+Satisfied Constraints:
+
+Constraint 1
+Constraint 2
+Constraint 3
+
+
+Dissatisfied Constraints:
+
+Constraint 1
+Constraint 2
+Constraint 3
+
+
+This is the response you have to evaluate:
+---
+{{Response}}
+---

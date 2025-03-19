@@ -1,0 +1,95 @@
+Hi, My task is to create base code and prompt. Which i will give LLM's and then test the response of LLM's.
+  
+
+Below is example Base code and prompt:
+```
+Base Code:
+```python
+A = []
+FENWICK = []
+
+def build_fenwicks():
+    global A, FENWICK
+    if not A:
+        raise ValueError("Cannot build Fenwicks array from an empty list.")
+    
+    n = len(A)
+    FENWICK = [0] * (n + 1)
+    
+    for i in range(n):
+        update_fenwicks(i, A[i])
+
+
+def update_fenwicks(index, value):
+    global A, FENWICK
+    n = len(A)
+    
+    if index < 0 or index >= n:
+        raise IndexError("Index out of bounds for update_fenwicks.")
+    
+    
+    A[index] += value
+    
+    
+    i = index + 1
+    while i <= n:
+        FENWICK[i] += value
+        i += i & (-i)
+
+
+def prefix_sum(index):
+    global FENWICK
+    if index < 0:
+        raise ValueError("prefix_sum index cannot be negative.")
+    if index >= len(FENWICK):
+        raise IndexError("prefix_sum index out of Fenwicks array range.")
+    
+    result = 0
+    i = index + 1  
+    while i > 0:
+        result += FENWICK[i]
+        i -= i & (-i)
+    return result
+
+
+def range_sum(left, right):
+    global A
+
+    n = len(A)
+    if left < 0 or right < 0 or left >= n or right >= n:
+        raise IndexError("Range indices out of Fenwicks array bounds.")
+
+    # Validate inputs
+    if left > right:
+        raise ValueError("Left index cannot be greater than right index.")
+
+    # Return range sum using prefix sums
+    return prefix_sum(right) - prefix_sum(left - 1) if left > 0 else prefix_sum(right)
+
+```
+
+Prompt
+
+Refactor the code above into a well-structured, modular Python program.  
+1. Create a class-based Fenwicks implementation that encapsulates the Fenwicks logic.  
+2. Ensure invalid indices are properly handled by exceptions as given in base code (e.g., ValueError, IndexError).  
+3. Include a suitable constructor to initialize the class.  
+```
+
+Now i want you to create me base code and prompt.
+
+Keep the stucture of Base code and prompt same as example Base code and Prompt.
+
+Base code and promtp that you will create should be a difficult task to solve.
+
+it should be refactor task just like the example base base code and prompt.
+
+Task should include have minium two classes and keep the prompt straightforward 
+
+Everything should be clear. There should be no ambiguity
+
+Create me new Prompt and base code now:
+
+
+
+NOTE: Task should not be of any graph and matrix or polynomial. it should be a complex calculation

@@ -1,0 +1,27 @@
+
+Conversational Type: 
+Code Authoring (Code Generation): This involves generating code from a text description. By providing details in the prompt, it elicits a response from the model that contains the generated code.
+Code Analysis & Explanation (Analyzing Code): This includes activities such as refactoring, compression, optimization, translation, and precise edits based on a text description. It is required to include the code in the prompt. For example, in refactoring, providing the code to be refactored is mandatory; without it, the purpose of the task is defeated.
+Coding Q&A & Assistance (Talk about Code): This involves general Q&A that doesn't necessarily include code but rather focuses on programming concepts, problem-solving, and solutions.
+Conversational Coding (Multi-turn): This is a mixture of the previous three types, allowing for multi-turn interactions that may involve code generation, analysis, and general coding assistance.
+
+Above is the criteria for writing the prompt of specific types.
+
+
+{{Meta data}}
+
+
+This is my metadata for a task. I need to write a perfect prompt for this metadata.Conversation tyoe is Code Authoring. So I need a perfect prompt which i will give to my LLM model.
+    
+
+Example Prompt:
+
+I am working on a global online publishing platform that supports multilingual user-generated content. I want to integrate Python's TextBlob library to implement a spell-checking and correction feature that works in multiple languages. Could you help me write a Python function to handle this? The function should:
+
+1. Accept a text input and the language code (like 'en' for English, 'es' for Spanish, etc.).
+2. Detect the language of the text if no language code is provided.
+3. Perform spell checking and correct any errors in the text.
+4. Return the corrected text along with a summary of the corrections made.
+5. Handle edge cases gracefully, like empty strings or unsupported languages, without crashing.
+
+The code should be simple, readable, and efficient.

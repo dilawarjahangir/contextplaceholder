@@ -1,0 +1,14 @@
+I gave a model prompt and he generated a response.
+Now i want you to create the another to give to add a new feature in the code.
+
+This is prompt:
+{{prompt}}
+
+
+This was generated code:
+{{code}}
+
+
+
+Prompt should be in 3 points of single line only.
+

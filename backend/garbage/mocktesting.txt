@@ -1,0 +1,4 @@
+{{Code}}
+
+
+Perform magic mock testing on this. Don't add anything by yourself just patch this code. just give in this file. don't any other module

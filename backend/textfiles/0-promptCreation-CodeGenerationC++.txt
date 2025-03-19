@@ -1,0 +1,63 @@
+Hi your task is to create prompt based on metadata.
+
+Here are some guidelines for prompt creation:
+
+Prompt Creation Guidelines: 
+Ensure the prompt is open-ended and requires a coding response.
+We need model breaking in Accuracy or Instruction Following metrics at least %50 of the turns.
+As before, prompts should be open-ended coding prompts covering the domains noted below.
+Please tag the category of the prompt in terms of the taxonomy  (see below for definitions)
+Please tag the difficulty as easy/medium/hard (see below for definitions)
+Please add an annotation that includes the list of programming languages involved in the problem. 
+Please add an annotation regarding whether the user expects the response to be executable out-of-the-box. (Examples where this might not be the case: user is providing a natural language response like a code review, User shows only a small snippet of a broader executable program, etc.)
+
+Following are the type of prompt structure that will be given in metadata
+
+Code Generation prompt guidelines:
+
+Code generation / synthesis
+Code generation, also known as code synthesis, is the process of automatically generating code that is executable. This process is based on various inputs, which can include natural language descriptions, diagrams, existing code, or other specifications. We distinguish from code editing (below).
+Code completion
+Text to code
+Text-to-SQL
+
+
+Metadata
+Topic: Code generation
+Domain: Problem Solving & Algorithms
+batchId: 2254
+Subtopic: Sorting and Searching Algorithms
+Use Case: A data engineer needs to develop a high-throughput pipeline for real-time autonomous vehicle data feeds, employing sorting and searching algorithms to rapidly organize and pinpoint crucial sensor readings.
+batchName: Batch 04
+projectId: 129
+Turn Length: Small (1-turn)
+projectName: Meta-LMSYS-Steerability
+Prompt Design: Single User Prompts
+Task Difficulty: Hard
+Steerability (L1): General Steerability
+Steerability (L2): Instruction Compliance
+Programming Language: C++
+
+
+Example prompt of another task from the metadata :
+```
+I want to develop a software module for an autonomous vehicle's real-time data processing pipeline. The pipeline ingests a continuous stream of sensor data, including LiDAR, GPS, and environmental metrics, at hundreds of records per second. I need help completing this personal project in C++.
+
+Follow all of the instructions given below:
+- Implement an efficient multi-threaded sorting algorithm to organize incoming data streams based on a user-specified key (e.g., timestamp or priority level).
+- Develop a custom binary search variant to dynamically search for sensor readings based on criteria (e.g., timestamp range or geolocation bounds) in O(1) or O(log n) time.
+- Ensure the module is scalable and adapts to fluctuations in data load without performance degradation.
+- Include robust test cases that validate the sorting and searching algorithms' accuracy and efficiency.
+- Test cases must simulate real-world scenarios, including missing or corrupted records and unordered data streams.
+- Optimize the solution as much as possible.
+- Provide a brief explanation of how the code works.
+- Perform a complexity analysis of the implemented code.
+
+```
+
+
+Now this is the metdata you will create prompt for:
+{{metadata}}
+
+
+Create me a prompt based on above guide lines. Prompt should be simple and small like example prompt. And it should be deifficult task for any LLM to perform.

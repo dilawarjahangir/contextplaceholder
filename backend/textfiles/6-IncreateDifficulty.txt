@@ -1,0 +1,15 @@
+Okay so this is the prompt:
+
+{{prompt}}
+I gave it to the LLM and i made the code very easily and it was passing all the test case i had built for it.
+
+
+Keeping the same structure of base code and prompt.
+
+I want you to create me a difficult prompt. Which is very difficult for LLM's to make and it should very extremely difficult task.
+
+But keep the pattern and strucutre of base code and prompt same as above base code and prompt given
+
+Keep the structure and context same of prompt .
+
+Create me new task

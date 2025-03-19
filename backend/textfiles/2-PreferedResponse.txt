@@ -1,0 +1,20 @@
+    I have given the prompt to a LLM.
+
+    LLM has generated mr two responses.
+
+
+    Prompt:
+    {{Prompt}}
+
+    Now you task is to simply choose 1 response which one is more preferred.
+
+
+    ResponseA:
+    {{ResponseA}}
+
+
+    ResponseB:
+    {{ResponseB}}
+
+
+    Give me one line answer which look like written by human.

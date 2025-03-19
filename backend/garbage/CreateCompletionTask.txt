@@ -1,0 +1,49 @@
+Hi, My task is to create base code and prompt. Which i will give LLM's and then test the response of LLM's.
+
+Below is example Base code and prompt:
+```
+Base Code:
+```python
+def obfuscate_string(s: str) -> str:
+    """
+    Obfuscates a string using multiple transformations for secure transmission.
+
+    Args:
+    s (str): Input string containing only lowercase alphabetic characters.
+
+    Returns:
+    str: Transformed string.
+    """
+```
+Prompt:
+I am working on a system that obfuscates strings to protect sensitive data during transmission. I want to create a python function that applies a multi-step transformation to a string before sending it over the network. The transformations are as follows:
+
+Character Position Swap:
+- To disrupt predictable patterns, divide the string into two halves. If the string has an odd length, include the middle character in the second half.
+- Swap the positions of the characters in the first and second halves.
+Vowel Increment:
+- To further obfuscate the string, replace each vowel (a, e, i, o, u) with the next vowel in the sequence:
+a → e,.... u → a.
+Consonant Decrement:
+- Replace each consonant with the previous consonant in alphabetical order:
+b → a,.... z → y.
+Reverse Even-Indexed Characters:
+- Reverse the order of all characters at even indices (0-based) in the string.
+
+The input string s contains only lowercase alphabetic characters (a-z).
+The string is non-empty.
+```
+
+Now i want you to create me base code and prompt.
+
+Keep the stucture of Base code and prompt same as example Base code and Prompt.
+
+Base code and promtp that you will create should be a difficult task to solve.
+
+it should be completion task just like the example base base code and prompt.
+
+Everything should be clear. There should be no ambiguity
+
+Create me new Prompt and base code now for another task:
+
+Note: It should not be similar task like example

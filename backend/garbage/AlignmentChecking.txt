@@ -1,0 +1,26 @@
+Hey
+
+I am sharing 3 things.
+
+1. Base code and prompt.
+2. Ideal code generated from the base code and prompt.
+3. pytest cases to test code
+
+Now i am sharing all above mentioned.
+
+
+{{Base code}}
+
+{{Ideal code}}
+
+{{pytest test cases}}
+
+
+Now you have everything. Your task is to do deep analysis and check if there is any contradiction between all three things.
+
+Also check if there is any ambiguity in prompt and that may confuse LLM's to make the base code like ideal code
+
+
+Let me tell you how you will check. We have a base code prompt. and According to the prompt base code will convert into ideal code and then pytest test cases are to test the refactored code. of this completely align with each other
+
+Give me short and logical answer

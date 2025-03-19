@@ -1,0 +1,54 @@
+I am going to provide prompt
+
+Prompt:
+
+{{prompt}}
+
+Difficulty guidelines are meant to be rough approximations and are not strict (i.e., all constraints below do not need to be satisfied). For the purpose of this project, difficulty level can be roughly defined based on the number of Instruction Following (IF) constraints in the prompts. For the type of prompts listed below, please use this section for reference.
+
+
+
+Easy: 
+
+Experience level: Undergraduate level 
+Knowledge required: Requires limited domain/algorithmics knowledge or implementation context (architecture, libraries, pre-existing code)
+Complexity of solution: The solution is easy to explain (e.g., code doesn’t need comments to be understood) and to test for/debug (limited corner cases)
+(New) IF constraints: Single User Prompts with 1-5 formatting/tone/general_instruction steers.
+ 
+
+Medium: 
+
+Experience level: Master's level 
+Knowledge required: May require knowledge of standard algorithms and data structures to get an optimal solution, knowledge of common libraries and concepts or additional code context. 
+Complexity of solution: Involves corner cases that should be dealt with separately; explanation of the solution requires some abstraction or decomposition of the problem into a few subproblems
+(New) IF constraints: 
+Single User Prompts with 6-10 formatting/tone/general_instruction steers
+Multi-turn Prompts (3 - 10 turns) w/no system prompt
+Single turn, System Prompt with 1-10 formatting/tone/general_instruction steers and associated single-turn user prompt.
+
+
+Hard: 
+
+Experience level: Domain Expert
+Knowledge required: Requires expert domain knowledge, or information on the specific application or deployment scenario, including substantial specific API/code context
+Complexity of solution: Finding a solution requires solving several non-trivial subproblems or finding non-trivial bugs; problem involves tricky corner cases, explaining the solution to a non-expert requires adding context
+(New) IF constraints:
+System Prompt with 1-10 formatting/tone/general_instruction steers and associated multi-turn user prompt.
+Multi-turn Prompts (3 - 10 turns) w system prompt
+Hierarchy between system prompt and user prompts (System Prompt > User Prompt)
+
+
+
+Now give me prompt difficulty with 4 small to the  point reason in simple english.
+ 
+
+
+Example:
+Experience level : Masters
+Extensive knowledge required for asynchronous programming and threading.
+Requires basic hashing data dstructures.
+Easy complexity considering the solution but extensive knowledge is required to give different caching strategies.
+
+
+
+Make the prompt difficult explanation according to difficulty level {{level}}.

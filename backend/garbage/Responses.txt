@@ -1,0 +1,119 @@
+Response A:
+
+{{Response A}}
+
+Response B:
+
+{{Response B}}
+
+Response C:
+
+{{Response C}}
+
+Response D:
+
+{{Response D}}
+
+These are the responses now evaluate them based on the evaluation criteria i have given you.
+
+
+Evaluation Criteria:
+
+
+1. Making sense 
+The LLM provides responses that fail to meaningfully engage with the user’s input. This includes:
+
+Repeating the same information unnecessarily.
+Restating the prompt without providing additional insight.
+Refusing to answer valid queries without proper justification
+
+2. Instruction following:
+
+Is the provided response on-point & respects all constraints in the user prompt? Is it tailored for the User skill level?
+
+Core areas we should look for in this case:
+
+Comprehends and adheres to all constraints and requests of user
+Addresses all the requests of the user (Exceptions will be requests that are outside the capability of the LLM. For example: Give me a sorting algorithm with O(log(n)) time OR Give me the production ready React app to track student data.)
+Focus remains on the user’s request
+Not too short to skip the important and helpful information
+Not too verbose to include unnecessary details
+Well-tailored for the skill level of the user
+
+
+3.  Accuracy
+
+Does the AI's response correctly and completely address the information and code requirements?
+
+Core areas we should look for in this case:
+
+Factual correctness
+Comprehensive Answer (No missing key points)
+Code syntax errors
+Code functional errors
+
+
+4. Efficiency:
+
+Is the AI's response optimal in terms of the approach, code complexity, case coverage, and the method suggested in response to the user's prompt?
+
+Core areas we should look for in this case:
+
+Optimality in terms of Time and Memory complexity (It is fine if assistant gives an algorithm which is efficient and used in mainstream rather than a complex algorithm which optimizes on time/memory a little bit more.)
+Handles all the edge cases
+Takes care of security aspect of code
+During Q&A, suggest optimal answer to the user
+
+5. Presentation:
+
+Docstrings are not needed but complex code lines should include comments detailing logic and behavior
+Test outputs include a comment with the expected response
+Explanations are presented in a clear manner using bullet points.
+Key terms are highlighted in bold whereas titles, articles, etc are italicized
+Response doesn’t give multiple redundant code solutions to solve the same problem
+Multi-line code blocks are wrapped in triple backticks with correct language specified after upper backticks to ensure proper indentation and formatting
+Markdown syntax is correct and represents a proper hierarchy
+White space and line breaks are used to improve readability and separate content sections
+Tables are constructed with Hyphens and Pipes and are correctly lined up
+Comments are clear and easily understood
+
+
+
+6. Up-to-date
+Does the code use any deprecated libraries to solve the problem?
+Core areas we should look for in this case:
+
+Stick to the latest stable versions of languages and libraries to avoid deprecated functions and gain performance benefits.
+Apply modern language features for better readability and efficiency, such as Python’s f-strings.
+Regularly update dependencies to incorporate the latest security patches using a dependency management tool.
+Follow current best practices and coding standards to ensure security and efficiency.
+Utilize optimized algorithms and data structures, leveraging built-in functions where possible.
+Write clear, maintainable code with appropriate comments, especially for complex areas.
+Ensure compatibility and functionality with unit tests and automated CI/CD pipelines.
+Stay informed on updates and changes within relevant communities or ecosystems.
+Where necessary, maintain backwards compatibility while providing clear upgrade paths.
+
+
+
+7. Other Issues:
+Are there any other significant issues in the response that affect user experience but were not covered in the predefined categories?
+
+We want you to not be confined by predefined categories while accessing the quality of response. For example: 1) Assistant forgets the context of its previous conversation. 2) The React Component provided by the assistant has very bad user experience. 3) Become overly apologetic about the things that can’t be done by the assistant.
+
+
+
+
+
+8. Final rating:
+
+These scores are relative to each other. So, rate the scores as a preference for each model as a rating.
+
+5- Exemplary
+
+4- Good
+
+3- Fair
+
+2- Bad
+
+1- Terrible

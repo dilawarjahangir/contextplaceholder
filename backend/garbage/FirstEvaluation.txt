@@ -1,0 +1,161 @@
+I gave a prompt to LLM modeal and it has generated me four responses.
+
+I am going to provide you the prompt and the responses which were created by my LLM model and your job is to evaluate the response based on the criteria that i will provide you.
+
+
+This is my prompt:
+"""
+{{prompt}}
+
+"""
+Evaluation Criteria:
+"""
+Response Review Guidelines
+These instructions will help you fill out the Evaluation Form attached to every response.
+
+Mistake Severity Definitions
+    Major Issues - Mistakes that negatively affect the user experience in significant/critical ways (The user gets little or no value, perhaps negative value).
+    Moderate Issues - Mistakes that partially affect the user experience. (The user gets some value, but significant improvement could be made).
+    Minor Issues - Mistakes that may not affect the user experience or affect it in trivial ways. (The user still gets most of the value, perhaps there’s room for improvement).
+    No Issues - No mistakes are made. (User gets full & optimal value)
+
+1. Making Sense 
+    The LLM provides responses that fail to meaningfully engage with the user’s input. This includes:
+        Repeating the same information unnecessarily. 
+        Restating the prompt without providing additional insight. 
+        Refusing to answer valid queries without proper justification 
+        These behaviors disrupt the conversation flow, reduce user satisfaction, and hinder productive interaction.
+
+    Major Issues - Mistakes that negatively affect the user experience in significant/critical ways (The user gets little or no value, perhaps negative value).
+    Moderate Issues - Mistakes that partially affect the user experience. (The user gets some value, but significant improvement could be made).
+    Minor Issues - Mistakes that may not affect the user experience or affect it in trivial ways. (The user still gets most of the value, perhaps there’s room for improvement).
+    No Issues - No mistakes are made. (User gets full & optimal value)    
+
+
+2. Instruction Following
+    Is the provided response on-point & respects all constraints in the user prompt? Is it tailored to the User's skill level?
+    Core areas we should look for in this case: 
+        Comprehends and adheres to all constraints and requests of user
+        Addresses all the requests of the user (Exceptions will be requests that are outside the capability of the LLM. For example: Give me a sorting algorithm with O(log(n)) time OR Give me the production-ready React app to track student data.)
+        Focus remains on the user’s request
+        Not too short to skip the important and helpful information
+        Not too verbose to include unnecessary details
+        Well-tailored for the skill level of the user
+
+    Major Issues - Mistakes that negatively affect the user experience in significant/critical ways (The user gets little or no value, perhaps negative value).
+    Moderate Issues - Mistakes that partially affect the user experience. (The user gets some value, but significant improvement could be made).
+    Minor Issues - Mistakes that may not affect the user experience or affect it in trivial ways. (The user still gets most of the value, perhaps there’s room for improvement).
+    No Issues - No mistakes are made. (User gets full & optimal value)   
+
+3. Accuracy
+
+    Does the AI's response correctly and completely address the information and code requirements?
+    Core areas we should look for in this case:
+        Factual correctness
+        Comprehensive Answer (No missing key points)
+        Code syntax errors
+        Code functional errors
+    
+    Major Issues - Mistakes that negatively affect the user experience in significant/critical ways (The user gets little or no value, perhaps negative value).
+    Moderate Issues - Mistakes that partially affect the user experience. (The user gets some value, but significant improvement could be made).
+    Minor Issues - Mistakes that may not affect the user experience or affect it in trivial ways. (The user still gets most of the value, perhaps there’s room for improvement).
+    No Issues - No mistakes are made. (User gets full & optimal value)   
+
+4. Efficiency
+
+    Is the AI's response optimal in terms of the approach, code complexity, case coverage, and the method suggested in response to the user's prompt?
+    Core areas we should look for in this case:
+        Optimality in terms of Time and Memory complexity (It is fine if assistant gives an algorithm which is efficient and used in mainstream rather than a complex algorithm which optimizes on time/memory a little bit more.)
+        Handles all the edge cases
+        Takes care of security aspect of code
+        During Q&A, suggest optimal answer to the user
+
+    Major Issues - Mistakes that negatively affect the user experience in significant/critical ways (The user gets little or no value, perhaps negative value).
+    Moderate Issues - Mistakes that partially affect the user experience. (The user gets some value, but significant improvement could be made).
+    Minor Issues - Mistakes that may not affect the user experience or affect it in trivial ways. (The user still gets most of the value, perhaps there’s room for improvement).
+    No Issues - No mistakes are made. (User gets full & optimal value)   
+
+5. Presentation
+    Is the presentation of the AI's response clear, well-organized, and appropriate for the user's skill level?
+    Core areas we should look for in this case:
+        Is well structured
+        Uses Markdown and LaTeX capabilities to present response in best way possible
+        Code is well formatted, commented, and readable
+        Does not use too formal language
+        Does not make use of informal slang or a language which is not appropriate.
+        Does not make typos or grammatical errors
+
+    Major Issues - Mistakes that negatively affect the user experience in significant/critical ways (The user gets little or no value, perhaps negative value).
+    Moderate Issues - Mistakes that partially affect the user experience. (The user gets some value, but significant improvement could be made).
+    Minor Issues - Mistakes that may not affect the user experience or affect it in trivial ways. (The user still gets most of the value, perhaps there’s room for improvement).
+    No Issues - No mistakes are made. (User gets full & optimal value)   
+
+
+6. Up-to-date
+    Ensures that code uses the latest libraries, functions, and modern practices while avoiding outdated or deprecated methods.
+    Core areas we should look for in this case:
+        Use modern, non-deprecated libraries and up-to-date methods (e.g. f-strings in Python, let/const in Javascript)
+        Recommend efficient and current best practices.
+
+    Major Issues - Mistakes that negatively affect the user experience in significant/critical ways (The user gets little or no value, perhaps negative value).
+    Moderate Issues - Mistakes that partially affect the user experience. (The user gets some value, but significant improvement could be made).
+    Minor Issues - Mistakes that may not affect the user experience or affect it in trivial ways. (The user still gets most of the value, perhaps there’s room for improvement).
+    No Issues - No mistakes are made. (User gets full & optimal value)   
+
+7. Executable Code
+    Classify the completeness and usability of the code:
+        No Issues: Code should run “out of the box” (ignoring whether it contains bugs)
+        Minor Issues:  The response updates a single function, meant to be copied into the user's broader code.
+        Moderate Issues: The response updates part of the code, with comments like “// rest of your code here”
+        Major Issues: The response provides a skeleton code block with partially implemented functions, using like “// your code here”
+        N/A: If the code is not included in the response.
+
+Important Note: Right out of the box means that the code will run in the appropriate context, provided the necessary environment (libraries, runtimes, etc.) is set up. If the code snippet is part of a larger codebase, it should work seamlessly when inserted into that context.
+
+
+    Major Issues - Mistakes that negatively affect the user experience in significant/critical ways (The user gets little or no value, perhaps negative value).
+    Moderate Issues - Mistakes that partially affect the user experience. (The user gets some value, but significant improvement could be made).
+    Minor Issues - Mistakes that may not affect the user experience or affect it in trivial ways. (The user still gets most of the value, perhaps there’s room for improvement).
+    No Issues - No mistakes are made. (User gets full & optimal value)   
+
+
+
+
+8. Code Output after Execution
+
+    This field evaluates whether the output provided in the model's response matches the actual output of the code when executed.
+    Yes: The code output included by the model in the response matches the output obtained after executing the code.
+    No: The code output included by the model in the response does not match the output obtained after executing the code.
+    N/A: No code output in the response from the model.
+
+Example: You asked about a Fibonacci function, and the model generated code with example usage, stating that running the function with an input of 5 would return 10. In this case, the expected output is part of the response—meaning the model is indicating what the output should be. You need to verify if the function actually returns 10 after execution and select Yes/No based on that. If the output is not specified and the model only provided the code without stating the expected result, select N/A.
+Other Issues
+Are there any other significant issues in the AI’s response that affect its overall performance or user experience but were not covered in the predefined categories? Please refer to Microsoft - Failure Categories LookUp for failure categories.
+
+9. Rating Justification
+    We will use this field to put:
+        Reasoning for the marked Minor/Moderate/Major Issues.
+        Details of the ‘Other Issues’ if it is marked Minor/Moderate/Major.
+
+Important Note: Please use this field to provide descriptions regarding the issues you identified in other fields. It’s important to fill in this field appropriately, as it is crucial for helping the task reviewer understand your thought process.
+
+The convention we use is to add the field name before the description. For example, if you find issues with 'Presentation,' you can describe it like this: 'Presentation: Lack of comments ... etc.'
+
+10. Comments for Reference
+
+    We will use this field to put:
+        Any notes that you want to convey to the reviewer? You can also include links to screenshots or a sandbox where you have tested something related to the response.
+
+
+Final Score
+    Evaluate the models based on their ranking or preference compared to each other. Remember, this score is relative to the other responses generated in the same turn.The rating scale is as follows:
+        Terrible
+        Bad
+        Fair
+        Good
+        Exemplary
+
+"""
+
+Now I will provide you the four responses which you will evaluate based on the evaluation criteria.
+

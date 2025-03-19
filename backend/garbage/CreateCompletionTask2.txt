@@ -1,0 +1,47 @@
+Hi, My task is to create base code and prompt. Which i will give LLM's and then test the response of LLM's.
+
+Below is example Base code and prompt:
+```
+Base Code:
+```python
+def evaluate_custom_expressions(expressions: List[str]) -> List[int]:
+    """
+    Evaluates a list of arithmetic expressions using modified operator precedence rules.
+
+    Args:
+    expressions (List[str]): A list of non-empty strings, each representing a valid arithmetic expression 
+                             composed of non-negative integers, the '+' and '*' operators, and parentheses.
+
+    Returns:
+    List[int]: A list of integers where each integer is the result of evaluating the corresponding expression.
+    """
+```
+Prompt:
+
+I am developing a specialized calculator that must evaluate arithmetic expressions with non-standard operator precedence. Unlike conventional evaluation, the rules for your function are as follo>
+
+1. Parentheses First: Evaluate any expressions within parentheses before handling the rest of the expression.
+2. Modified Operator Precedence: In the absence of parentheses, perform addition ('+') operations before multiplication ('*'), regardless of their positions in the expression.
+3. Left-Associativity: Both '+' and '*' operators should be treated as left-associative.
+4. Expression Format:
+   - Each expression is provided as a non-empty string containing only digits (0-9), the operators '+' and '*', and properly matched parentheses.
+   - There are no spaces in any expression.
+   - All numbers are valid non-negative integers and will not have leading zeros.
+
+Your task is to implement a Python function that processes a list of such expressions and returns a list of results. Each result must be computed strictly following the modified precedence rules
+
+```
+
+Now i want you to create me base code and prompt.
+
+Keep the stucture of Base code and prompt same as example Base code and Prompt.
+
+Base code and promtp that you will create should be a difficult task to solve.
+
+it should be completion task just like the example base base code and prompt.
+
+Everything should be clear. There should be no ambiguity
+
+Create me new Prompt and base code now for another task:
+
+Note: It should not be similar task like example

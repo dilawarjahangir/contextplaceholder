@@ -1,0 +1,859 @@
+You task is to evaluate reponse that Model has generated from a prompt.
+
+
+This is the prompt i gave to LLM:
+```
+{{Prompt}}
+```
+
+This is response model Generated:
+
+```
+{{GeneratedResponse}}
+
+## 1. Instruction Following - Number of satisfied constraints:
+Instruction Following Guidelines
+
+
+
+Instruction Following (IF) measures how well the response adheres to all aspects of the given instructions. It ensures that the response completely addresses the user’s request without omitting any required information or adding unnecessary elements.
+
+
+
+A response passes the IF check if it fully meets the user’s prompt and all system-defined constraints. However, IF does not evaluate whether the response is factually correct (accuracy) but only whether it fulfills all specified requirements.
+
+
+
+How to Evaluate Instruction Following
+
+
+
+Step 1: Identify All Constraints
+
+
+
+Before scoring a response, determine all constraints based on:
+
+User’s explicit instructions (e.g., “Fix three issues in the code,” “Summarize in 100 words”).
+System-defined instructions (e.g., “Ensure responses follow a specific format or structure”).
+Implicit requirements inferred from the context (e.g., If a user asks for a “detailed explanation,” a one-line response does not satisfy the request).
+
+
+Step 2: Check for Unmet Constraints
+
+Count how many constraints were not followed or were only partially addressed.
+Identify whether any unnecessary additions were included outside the original instructions.
+
+
+Step 3: Assign a Number
+
+Please input the number of implicit/explicit rules, issues, or constraints for Instruction Following that the model is supposed to adhere to.
+
+
+What Constitutes Good Instruction Following?
+
+Complete coverage of all requested aspects.
+Adherence to the required format, structure, or length.
+No unnecessary additions beyond what was asked.
+Clear and precise execution of steps or specific actions mentioned.
+
+
+Common Mistakes That Fail IF Checks
+
+Missing required details.
+Ignoring formatting, structure, or length requirements.
+Fixing only part of a multi-step request.
+Adding extra information that was not requested.
+
+
+## 2. Instruction Following - Number of dissatisfied constraints *
+
+Instruction Following Guidelines
+
+
+
+Instruction Following (IF) measures how well the response adheres to all aspects of the given instructions. It ensures that the response completely addresses the user’s request without omitting any required information or adding unnecessary elements.
+
+
+
+A response passes the IF check if it fully meets the user’s prompt and all system-defined constraints. However, IF does not evaluate whether the response is factually correct (accuracy) but only whether it fulfills all specified requirements.
+
+
+
+How to Evaluate Instruction Following
+
+
+
+Step 1: Identify All Constraints
+
+
+
+Before scoring a response, determine all constraints based on:
+
+User’s explicit instructions (e.g., “Fix three issues in the code,” “Summarize in 100 words”).
+System-defined instructions (e.g., “Ensure responses follow a specific format or structure”).
+Implicit requirements inferred from the context (e.g., If a user asks for a “detailed explanation,” a one-line response does not satisfy the request).
+
+
+Step 2: Check for Unmet Constraints
+
+Count how many constraints were not followed or were only partially addressed.
+Identify whether any unnecessary additions were included outside the original instructions.
+
+
+Step 3: Assign a Number
+
+After identifying any issues, assign a number based on how many rules are not met.
+For example, if we have given 5 rules/constraints for Instruction Following in the expected field and the model has followed only 3, the answer to this field will be 3.
+
+
+What Constitutes Good Instruction Following?
+
+Complete coverage of all requested aspects.
+Adherence to the required format, structure, or length.
+No unnecessary additions beyond what was asked.
+Clear and precise execution of steps or specific actions mentioned.
+
+
+Common Mistakes That Fail IF Checks
+
+Missing required details.
+Ignoring formatting, structure, or length requirements.
+Fixing only part of a multi-step request.
+Adding extra information that was not requested.
+
+
+## 3. Accuracy - Number of satisfied constraints:
+
+Accuracy Guidelines
+
+
+
+Definition:
+
+Accuracy evaluates whether the response is correct, free from errors, and meets the required specifications. In coding responses, this means the code should be executable, produce the expected output, and handle various cases appropriately.
+
+
+
+A response passes the accuracy check if it is factually correct, logically sound, the code executes with the desired output.. Incomplete, misleading, or incorrect responses fail the accuracy check.
+
+
+
+NOTE: DIFFERENCE BETWEEN INSTRUCTION FOLLOWING AND ACCURACY
+
+
+
+Accuracy and instruction following are closely related but distinct evaluation criteria, often this causes confusion in coding assessments. Instruction Following (IF) measures whether the response adheres to all aspects of the prompt, ensuring that no required details are missing and no extra, unrequested information is included. Accuracy, on the other hand, evaluates whether the response is correct. A response can follow all instructions perfectly but still be incorrect due to logical errors, incorrect syntax, or incomplete handling of edge cases.
+
+
+
+For example, if a user asks the AI to debug three issues in a given script, and the model only fixes two of them, it fails the IF check because it did not fully follow the instructions. However, even if all three issues are addressed, the model could still fail the accuracy check if the fixes introduce new bugs, do not resolve the problems correctly, or fail under certain edge cases. Therefore, instruction following ensures completeness, while accuracy ensures correctness.
+
+
+
+How to Evaluate Accuracy
+
+
+
+Step 1: Assess Key Accuracy Criteria
+
+Correctness: The response meets the expected result without errors, inconsistencies, or logical flaws.
+Precision: The response is free from unnecessary or redundant information that could confuse.
+Relevance: The response directly addresses the given problem or prompt without going off-topic.
+Completeness: The response includes all necessary details, ensuring no critical elements are missing.
+Case Coverage: The response accounts for edge cases, error handling, and a range of possible inputs to ensure robust behavior.
+
+
+Step 2: Identify Any Inaccuracies or Errors
+
+Check if the code contains syntax errors, logical mistakes, or incorrect implementations.
+Verify that the response meets all aspects of the question without missing any critical details.
+Ensure that the response is free from misleading, irrelevant, or redundant information.
+Evaluate whether the code handles edge cases and error conditions appropriately.
+
+
+Step 3: Assign a Number
+
+Please input the number of implicit/explicit rules, issues, or constraints for Accuracy that the model is required to meet.
+
+
+What Constitutes High Accuracy?
+
+The response is factually and logically correct.
+The code executes without errors and produces the expected output.
+The solution is precise, avoiding unnecessary explanations or details.
+All relevant aspects of the question are addressed completely.
+The code considers edge cases and potential error scenarios.
+
+
+Common Accuracy Issues That Reduce Score
+
+Logical errors or incorrect outputs.
+Syntax errors that prevent execution.
+Missing key requirements or incomplete solutions.
+Overly broad or vague responses that lack precision.
+Failure to handle edge cases, leading to incorrect behavior in certain scenarios.
+
+
+## 4. Accuracy - Number of dissatisfied constraints:
+
+Accuracy Guidelines
+
+
+
+Definition:
+
+Accuracy evaluates whether the response is correct, free from errors, and meets the required specifications. In coding responses, this means the code should be executable, produce the expected output, and handle various cases appropriately.
+
+
+
+A response passes the accuracy check if it is factually correct, logically sound, the code executes with the desired output.. Incomplete, misleading, or incorrect responses fail the accuracy check.
+
+
+
+NOTE: DIFFERENCE BETWEEN INSTRUCTION FOLLOWING AND ACCURACY
+
+
+
+Accuracy and instruction following are closely related but distinct evaluation criteria, often this causes confusion in coding assessments. Instruction Following (IF) measures whether the response adheres to all aspects of the prompt, ensuring that no required details are missing and no extra, unrequested information is included. Accuracy, on the other hand, evaluates whether the response is correct. A response can follow all instructions perfectly but still be incorrect due to logical errors, incorrect syntax, or incomplete handling of edge cases.
+
+
+
+For example, if a user asks the AI to debug three issues in a given script, and the model only fixes two of them, it fails the IF check because it did not fully follow the instructions. However, even if all three issues are addressed, the model could still fail the accuracy check if the fixes introduce new bugs, do not resolve the problems correctly, or fail under certain edge cases. Therefore, instruction following ensures completeness, while accuracy ensures correctness.
+
+
+
+How to Evaluate Accuracy
+
+
+
+Step 1: Assess Key Accuracy Criteria
+
+Correctness: The response meets the expected result without errors, inconsistencies, or logical flaws.
+Precision: The response is free from unnecessary or redundant information that could confuse.
+Relevance: The response directly addresses the given problem or prompt without going off-topic.
+Completeness: The response includes all necessary details, ensuring no critical elements are missing.
+Case Coverage: The response accounts for edge cases, error handling, and a range of possible inputs to ensure robust behavior.
+
+
+Step 2: Identify Any Inaccuracies or Errors
+
+Check if the code contains syntax errors, logical mistakes, or incorrect implementations.
+Verify that the response meets all aspects of the question without missing any critical details.
+Ensure that the response is free from misleading, irrelevant, or redundant information.
+Evaluate whether the code handles edge cases and error conditions appropriately.
+
+
+Step 3: Assign a Number
+
+After identifying any issues, assign a number based on how many rules are not met.
+For example, if we have given 5 rules/constraints for Accuracy in the expected field and the model has followed only 3, the answer to this field will be 3.
+
+
+What Constitutes High Accuracy?
+
+The response is factually and logically correct.
+The code executes without errors and produces the expected output.
+The solution is precise, avoiding unnecessary explanations or details.
+All relevant aspects of the question are addressed completely.
+The code considers edge cases and potential error scenarios.
+
+
+Common Accuracy Issues That Reduce Score
+
+Logical errors or incorrect outputs.
+Syntax errors that prevent execution.
+Missing key requirements or incomplete solutions.
+Overly broad or vague responses that lack precision.
+Failure to handle edge cases, leading to incorrect behavior in certain scenarios.
+
+
+
+## 5. Efficiency - Number of satisfied constraints:
+
+Efficiency Guidelines
+
+
+
+Definition:
+
+Optimality and efficiency evaluate whether the code adheres to common programming best practices, avoids unnecessary repetition, and implements an optimal approach in terms of time complexity, space complexity, and maintainability. A well-optimized solution should minimize redundant operations, use appropriate data structures, and follow industry-standard coding practices to ensure scalability and performance.
+
+
+
+NOTE: DIFFERENCE BETWEEN ACCURACY AND EFFICIENCY:
+
+
+
+While accuracy ensures that a solution is correct and meets all the required conditions, efficiency focuses on how well the solution is implemented in terms of performance and best practices. A solution can be accurate but inefficient, meaning it produces the correct output but does so in a suboptimal way, such as using unnecessary loops, excessive memory allocation, or redundant computations.
+
+
+
+For example, consider a problem requiring a search operation in a sorted list.
+
+An accurate but inefficient solution might use linear search (O(n)), iterating through every element even though a more efficient method exists.
+An optimal solution would use binary search (O(log n)), reducing the number of operations needed to find the element.
+
+
+Similarly, if a task can be accomplished using a single loop instead of three nested loops, reducing time complexity from O(n³) to O(n), the optimized approach is preferred.
+
+
+
+NOTE: DIFFERENCE BETWEEN PRESENTATION AND EFFICIENCY:
+
+
+
+Presentation ensures that the explanation and response structure (including markdown, lists, and formatting) are clear and well-organized.
+Code Readability & Maintainability ensures that the code itself is structured, easy to read, and follows best practices for future modifications.
+
+
+For example, a response might have good presentation with clear markdown formatting and sections, but poor code readability if the variable names are cryptic, functions are overly complex, or redundant logic is present. Conversely, the code might be well-written and maintainable, but the response could have poor presentation if it lacks headers or formatting, making it hard to navigate.
+
+
+
+How to Evaluate Code Efficiency
+
+
+
+Step 1: Assess Key Efficiency Criteria
+
+Time Complexity: Does the solution use the most efficient algorithm possible? Are there unnecessary nested loops or redundant computations that could be optimized?
+Space Complexity: Does the solution use memory efficiently? Are there unnecessary data structures or excessive memory allocations that could be avoided?
+Reusability: Are functions modular and reusable, avoiding code duplication? Does the solution follow the DRY (Don’t Repeat Yourself) principle?
+Scalability: Can the code handle large inputs efficiently without significant performance degradation?
+Code Readability and Maintainability: Does the code follow clean coding principles? Is it well-structured with meaningful variable names and appropriate use of functions?
+
+
+Step 2: Identify Areas for Optimization
+
+Check if loops, recursive calls, or repeated calculations can be minimized.
+Identify whether more efficient data structures (e.g., hash tables instead of arrays for lookups) can be used.
+Look for code repetition that could be replaced with reusable functions.
+Verify if the code scales well with larger inputs, avoiding performance bottlenecks.
+
+
+Step 3: Assign a Number
+
+ Please input the number of implicit/explicit rules, issues, or constraints for Efficiency that the model must comply with.
+
+
+What Constitutes High Efficiency?
+
+Minimal loops and function calls where possible.
+Efficient data structures suited to the problem (e.g., hash tables for lookups instead of linear searches).
+Optimized algorithms (e.g., quicksort instead of bubble sort for sorting large datasets).
+Reusable functions and modular design to avoid code duplication.
+Proper space management to prevent excessive memory consumption.
+
+
+Common Efficiency Issues That Reduce Score
+
+Using multiple nested loops where a single loop could suffice.
+Repeating the same calculations instead of storing intermediate results.
+Using an inefficient algorithm when a better alternative exists.
+Excessive memory allocation, leading to unnecessary space complexity.
+Writing long, redundant code instead of modular functions.
+
+
+
+## 6. Efficiency - Number of dissatisfied constraints:
+
+Efficiency Guidelines
+
+
+
+Definition:
+
+Optimality and efficiency evaluate whether the code adheres to common programming best practices, avoids unnecessary repetition, and implements an optimal approach in terms of time complexity, space complexity, and maintainability. A well-optimized solution should minimize redundant operations, use appropriate data structures, and follow industry-standard coding practices to ensure scalability and performance.
+
+
+
+NOTE: DIFFERENCE BETWEEN ACCURACY AND EFFICIENCY:
+
+
+
+While accuracy ensures that a solution is correct and meets all the required conditions, efficiency focuses on how well the solution is implemented in terms of performance and best practices. A solution can be accurate but inefficient, meaning it produces the correct output but does so in a suboptimal way, such as using unnecessary loops, excessive memory allocation, or redundant computations.
+
+
+
+For example, consider a problem requiring a search operation in a sorted list.
+
+An accurate but inefficient solution might use linear search (O(n)), iterating through every element even though a more efficient method exists.
+An optimal solution would use binary search (O(log n)), reducing the number of operations needed to find the element.
+
+
+Similarly, if a task can be accomplished using a single loop instead of three nested loops, reducing time complexity from O(n³) to O(n), the optimized approach is preferred.
+
+
+
+NOTE: DIFFERENCE BETWEEN PRESENTATION AND EFFICIENCY:
+
+
+
+Presentation ensures that the explanation and response structure (including markdown, lists, and formatting) are clear and well-organized.
+Code Readability & Maintainability ensures that the code itself is structured, easy to read, and follows best practices for future modifications.
+
+
+For example, a response might have good presentation with clear markdown formatting and sections, but poor code readability if the variable names are cryptic, functions are overly complex, or redundant logic is present. Conversely, the code might be well-written and maintainable, but the response could have poor presentation if it lacks headers or formatting, making it hard to navigate.
+
+
+
+How to Evaluate Code Efficiency
+
+
+
+Step 1: Assess Key Efficiency Criteria
+
+Time Complexity: Does the solution use the most efficient algorithm possible? Are there unnecessary nested loops or redundant computations that could be optimized?
+Space Complexity: Does the solution use memory efficiently? Are there unnecessary data structures or excessive memory allocations that could be avoided?
+Reusability: Are functions modular and reusable, avoiding code duplication? Does the solution follow the DRY (Don’t Repeat Yourself) principle?
+Scalability: Can the code handle large inputs efficiently without significant performance degradation?
+Code Readability and Maintainability: Does the code follow clean coding principles? Is it well-structured with meaningful variable names and appropriate use of functions?
+
+
+Step 2: Identify Areas for Optimization
+
+Check if loops, recursive calls, or repeated calculations can be minimized.
+Identify whether more efficient data structures (e.g., hash tables instead of arrays for lookups) can be used.
+Look for code repetition that could be replaced with reusable functions.
+Verify if the code scales well with larger inputs, avoiding performance bottlenecks.
+
+
+Step 3: Assign a Number
+
+After identifying any issues, assign a number based on how many rules are not met.
+For example, if we have given 5 rules/constraints for Efficiency in the expected field and the model has followed only 3, the answer to this field will be 3.
+
+
+What Constitutes High Efficiency?
+
+Minimal loops and function calls where possible.
+Efficient data structures suited to the problem (e.g., hash tables for lookups instead of linear searches).
+Optimized algorithms (e.g., quicksort instead of bubble sort for sorting large datasets).
+Reusable functions and modular design to avoid code duplication.
+Proper space management to prevent excessive memory consumption.
+
+
+Common Efficiency Issues That Reduce Score
+
+Using multiple nested loops where a single loop could suffice.
+Repeating the same calculations instead of storing intermediate results.
+Using an inefficient algorithm when a better alternative exists.
+Excessive memory allocation, leading to unnecessary space complexity.
+Writing long, redundant code instead of modular functions.
+
+
+
+## 7. Presentation - Number of satisfied constraints:
+
+Presentation Guidelines
+
+
+
+Definition:
+
+Presentation evaluates how well the response is structured, formatted, and documented. It ensures clarity, readability, and proper organization while maintaining a professional tone. This dimension applies to both written explanations and code responses.
+
+
+
+A well-presented response should be logically structured, easy to navigate, and formatted for readability. In coding responses, proper documentation, inline comments, and adherence to coding style guidelines are essential.
+
+
+
+How to Evaluate Presentation
+
+
+
+Step 1: Identify Implicit Formatting Rules
+
+
+
+Implicit formatting rules include:
+
+Use of professional tone throughout the response.
+Concise responses for simple prompts, with key points highlighted using bold text when needed.
+Detailed formatting for complex responses, including proper markdown headers (e.g., ### Section Title).
+Use of lists (bulleted or numbered) instead of long paragraphs where appropriate.
+Proper code block formatting with the correct language tag (e.g., ```python for Python code).
+Minimizing multiple code blocks, keeping related code in a single, cohesive block.
+Informative and useful comments within code (not overly verbose, but meaningful).
+Grouping explanations logically, ensuring that related concepts are together.
+Providing visual elements (e.g., charts, tables) where useful, ensuring all references are functional.
+Consistent use of headers and formatting, avoiding mixed styles.
+Avoiding unnecessary introductory or concluding statements, unless they add clarity or summarize key points.
+
+
+Step 2: Check for Unmet Formatting Rules
+
+Identify which formatting rules were not followed.
+Count the number of violations and assess their impact on clarity and readability.
+
+
+Step 3: Assign a Number
+
+Please input the number of implicit/explicit rules, issues, or constraints for Presentation that the model is expected to follow.
+
+
+What Constitutes Good Presentation?
+
+Clear organization, using headers and sections where necessary.
+Readable formatting with lists, bold highlights, and concise explanations.
+Properly formatted code blocks with syntax highlighting.
+Well-documented code, including helpful and concise comments.
+Logical flow of information, avoiding redundancy or excessive verbosity.
+
+
+Common Presentation Issues That Reduce Clarity
+
+Long paragraphs where lists or headers would improve readability.
+Lack of markdown formatting for sectioning and structuring.
+Excessive use of multiple code blocks instead of consolidating related sections.
+Unclear or missing code comments, making it harder to understand functionality.
+Inconsistent formatting styles, causing readability issues.
+Broken or improperly formatted code/output, making it difficult to use.
+
+
+
+## 8. Presentation - Number of dissatisfied constraints:
+
+Presentation Guidelines
+
+
+
+Definition:
+
+Presentation evaluates how well the response is structured, formatted, and documented. It ensures clarity, readability, and proper organization while maintaining a professional tone. This dimension applies to both written explanations and code responses.
+
+
+
+A well-presented response should be logically structured, easy to navigate, and formatted for readability. In coding responses, proper documentation, inline comments, and adherence to coding style guidelines are essential.
+
+
+
+How to Evaluate Presentation
+
+
+
+Step 1: Identify Implicit Formatting Rules
+
+
+
+Implicit formatting rules include:
+
+Use of professional tone throughout the response.
+Concise responses for simple prompts, with key points highlighted using bold text when needed.
+Detailed formatting for complex responses, including proper markdown headers (e.g., ### Section Title).
+Use of lists (bulleted or numbered) instead of long paragraphs where appropriate.
+Proper code block formatting with the correct language tag (e.g., ```python for Python code).
+Minimizing multiple code blocks, keeping related code in a single, cohesive block.
+Informative and useful comments within code (not overly verbose, but meaningful).
+Grouping explanations logically, ensuring that related concepts are together.
+Providing visual elements (e.g., charts, tables) where useful, ensuring all references are functional.
+Consistent use of headers and formatting, avoiding mixed styles.
+Avoiding unnecessary introductory or concluding statements, unless they add clarity or summarize key points.
+
+
+Step 2: Check for Unmet Formatting Rules
+
+Identify which formatting rules were not followed.
+Count the number of violations and assess their impact on clarity and readability.
+
+
+Step 3: Assign a Number
+
+After identifying any issues, assign a number based on how many rules are not met.
+For example, if we have given 5 rules/constraints for Presentation in the expected field and the model has followed only 3, the answer to this field will be 3.
+
+
+What Constitutes Good Presentation?
+
+Clear organization, using headers and sections where necessary.
+Readable formatting with lists, bold highlights, and concise explanations.
+Properly formatted code blocks with syntax highlighting.
+Well-documented code, including helpful and concise comments.
+Logical flow of information, avoiding redundancy or excessive verbosity.
+
+
+Common Presentation Issues That Reduce Clarity
+
+Long paragraphs where lists or headers would improve readability.
+Lack of markdown formatting for sectioning and structuring.
+Excessive use of multiple code blocks instead of consolidating related sections.
+Unclear or missing code comments, making it harder to understand functionality.
+Inconsistent formatting styles, causing readability issues.
+Broken or improperly formatted code/output, making it difficult to use.
+
+
+
+## 9. Up-to-date - Number of satisfied constraints:
+
+Up-to-Date Code Guidelines
+
+
+
+Definition:
+
+The Up-to-Date dimension evaluates whether the code uses modern, well-maintained libraries and functions while avoiding deprecated or outdated methods. Writing up-to-date code ensures long-term compatibility, security, and maintainability, reducing the likelihood of issues when upgrading dependencies or integrating with newer technologies.
+
+
+
+Considerations for Model Cutoff Date (December 2023)
+
+
+
+Since the model’s knowledge is up to December 2023, its understanding of the most recent updates, deprecations, and best practices is limited to that timeframe. This means:
+
+The model can verify whether a function or library was up-to-date as of December 2023 but cannot assess changes, deprecations, or updates introduced after that date.
+If a function or library was already deprecated before or by December 2023, it should be flagged as outdated.
+If newer versions of frameworks or languages were released after December 2023, the model may or may not recognize their improvements or deprecations, and human verification may be needed for the latest standards.
+
+
+For example, if solving a machine learning problem:
+
+Using sklearn.preprocessing.LabelEncoder() would be accurate, but using sklearn.compose.ColumnTransformer() in some cases may be more up-to-date.
+Using asyncio.get_event_loop().run_until_complete() may work, but asyncio.run() is the more modern, preferred method.
+In JavaScript, var is outdated, and let or const should be used instead.
+
+
+DIFFERENCE BETWEEN WHAT UP-TO-DATE MEANS CONCERNING PRESENTATION AND THIS:
+
+
+
+1. Up-to-Date in Presentation (Formatting and Structure)
+
+Scope: Ensures that the response structure, formatting, and explanations follow modern communication standards.
+Focus: Covers proper markdown usage, structured responses with headers, clear explanations, and adherence to professional tone and readability guidelines.
+Example Issues:
+Using outdated markdown practices or broken formatting.
+Poorly structured explanations that do not align with best documentation practices.
+Writing long paragraphs instead of using structured bullet points for clarity.
+2. Up-to-Date in Code Evaluation (Modern Libraries and Functions)
+
+Scope: Ensures that the code itself is modern, uses actively maintained libraries, and avoids deprecated functions.
+Focus: Checks whether the code aligns with best programming practices, modern syntax, and updated libraries as of December 2023.
+Example Issues:
+Using Python’s asyncio.get_event_loop() instead of asyncio.run().
+Using var in JavaScript instead of let or const.
+Using outdated database queries instead of optimized ORM methods.
+
+
+How to Evaluate Up-to-Date Code
+
+
+
+Step 1: Assess Key Criteria
+
+Use of Modern Libraries: Are the libraries and dependencies used actively maintained and not deprecated as of December 2023?
+Avoidance of Deprecated Functions: Does the code avoid deprecated methods that were already outdated before December 2023?
+Adherence to Latest Best Practices: Does the code align with the best practices known up until December 2023?
+Security and Stability: Does the code use functions that are known to be stable and secure?
+
+
+Step 2: Identify Outdated or Deprecated Elements
+
+Check if any libraries used had been replaced or deprecated before December 2023.
+Verify whether any functions were marked as deprecated in official documentation before that date.
+Ensure that the code follows modern language conventions and best practices known until the model’s cutoff date.
+Look for unnecessary compatibility adjustments for outdated environments (e.g., polyfills for features that are now natively supported).
+
+
+Step 3: Assign a Number
+
+Please input the number of implict/explict rule/issues/constraints for Up-To-Date that the model is supposed to follow.
+
+
+What Constitutes Up-to-Date Code?
+
+Uses actively maintained libraries that were not deprecated before December 2023.
+Avoids functions that were already marked as deprecated in official documentation before that date.
+Follows modern programming language conventions and best practices known up to December 2023.
+Utilizes secure, stable, and efficient methods instead of legacy workarounds.
+Compatible with the latest versions of the programming language and frameworks as of December 2023.
+
+
+Common Issues That Reduce Score
+
+Use of outdated libraries that were already deprecated before December 2023.
+Relying on legacy functions when modern alternatives existed before the cutoff date.
+Using old-style syntax or practices that were already outdated in 2023.
+Writing code that depends on specific older versions of a language or framework, limiting future compatibility.
+
+
+Handling Post-2023 Updates
+
+If working with technology updates beyond December 2023, human verification is required to check:
+The latest library versions and whether newer methods exist.
+Updated documentation for any newly deprecated functions.
+Community and official recommendations for best practices beyond the model’s knowledge.
+
+10: Up-To-Date - Number of dissatisfied constraints:
+
+Up-to-Date Code Guidelines
+
+
+
+Definition:
+
+The Up-to-Date dimension evaluates whether the code uses modern, well-maintained libraries and functions while avoiding deprecated or outdated methods. Writing up-to-date code ensures long-term compatibility, security, and maintainability, reducing the likelihood of issues when upgrading dependencies or integrating with newer technologies.
+
+
+
+Considerations for Model Cutoff Date (December 2023)
+
+
+
+Since the model’s knowledge is up to December 2023, its understanding of the most recent updates, deprecations, and best practices is limited to that timeframe. This means:
+
+The model can verify whether a function or library was up-to-date as of December 2023 but cannot assess changes, deprecations, or updates introduced after that date.
+If a function or library was already deprecated before or by December 2023, it should be flagged as outdated.
+If newer versions of frameworks or languages were released after December 2023, the model may or may not recognize their improvements or deprecations, and human verification may be needed for the latest standards.
+
+
+For example, if solving a machine learning problem:
+
+Using sklearn.preprocessing.LabelEncoder() would be accurate, but using sklearn.compose.ColumnTransformer() in some cases may be more up-to-date.
+Using asyncio.get_event_loop().run_until_complete() may work, but asyncio.run() is the more modern, preferred method.
+In JavaScript, var is outdated, and let or const should be used instead.
+
+
+DIFFERENCE BETWEEN WHAT UP-TO-DATE MEANS CONCERNING PRESENTATION AND THIS:
+
+
+
+1. Up-to-Date in Presentation (Formatting and Structure)
+
+Scope: Ensures that the response structure, formatting, and explanations follow modern communication standards.
+Focus: Covers proper markdown usage, structured responses with headers, clear explanations, and adherence to professional tone and readability guidelines.
+Example Issues:
+Using outdated markdown practices or broken formatting.
+Poorly structured explanations that do not align with best documentation practices.
+Writing long paragraphs instead of using structured bullet points for clarity.
+2. Up-to-Date in Code Evaluation (Modern Libraries and Functions)
+
+Scope: Ensures that the code itself is modern, uses actively maintained libraries, and avoids deprecated functions.
+Focus: Checks whether the code aligns with best programming practices, modern syntax, and updated libraries as of December 2023.
+Example Issues:
+Using Python’s asyncio.get_event_loop() instead of asyncio.run().
+Using var in JavaScript instead of let or const.
+Using outdated database queries instead of optimized ORM methods.
+
+
+How to Evaluate Up-to-Date Code
+
+
+
+Step 1: Assess Key Criteria
+
+Use of Modern Libraries: Are the libraries and dependencies used actively maintained and not deprecated as of December 2023?
+Avoidance of Deprecated Functions: Does the code avoid deprecated methods that were already outdated before December 2023?
+Adherence to Latest Best Practices: Does the code align with the best practices known up until December 2023?
+Security and Stability: Does the code use functions that are known to be stable and secure?
+
+
+Step 2: Identify Outdated or Deprecated Elements
+
+Check if any libraries used had been replaced or deprecated before December 2023.
+Verify whether any functions were marked as deprecated in official documentation before that date.
+Ensure that the code follows modern language conventions and best practices known until the model’s cutoff date.
+Look for unnecessary compatibility adjustments for outdated environments (e.g., polyfills for features that are now natively supported).
+
+
+Step 3: Assign a Number
+
+After identifying any issues, assign a number based on how many rules are not met.
+For example, if we have given 5 rules/constraints for Presentation in the expected field and the model has followed only 3, the answer to this field will be 3.
+
+
+What Constitutes Up-to-Date Code?
+
+Uses actively maintained libraries that were not deprecated before December 2023.
+Avoids functions that were already marked as deprecated in official documentation before that date.
+Follows modern programming language conventions and best practices known up to December 2023.
+Utilizes secure, stable, and efficient methods instead of legacy workarounds.
+Compatible with the latest versions of the programming language and frameworks as of December 2023.
+
+
+Common Issues That Reduce Score
+
+Use of outdated libraries that were already deprecated before December 2023.
+Relying on legacy functions when modern alternatives existed before the cutoff date.
+Using old-style syntax or practices that were already outdated in 2023.
+Writing code that depends on specific older versions of a language or framework, limiting future compatibility.
+
+
+Handling Post-2023 Updates
+
+If working with technology updates beyond December 2023, human verification is required to check:
+The latest library versions and whether newer methods exist.
+Updated documentation for any newly deprecated functions.
+Community and official recommendations for best practices beyond the model’s knowledge.
+
+
+
+like this if there are 6 constraints:
+INSTRUCTION FOLLOWING:
+Satisfied constraints:
+— constraint 1
+— constraint 2
+— constraint 3
+……
+Dissatisfied constraints:
+— constraint 1
+— constraint 2
+— constraint 2
+….
+
+ACCURACY:
+Satisfied constraints:
+— constraint 1
+— constraint 2
+— constraint 3
+……
+Dissatisfied constraints:
+— constraint 1
+— constraint 2
+— constraint 3
+
+….And so on…
+
+ACCURACY:
+Satisfied constraints:
+— constraint 1
+— constraint 2
+
+……
+Dissatisfied constraints:
+— constraint 1
+
+
+….And so on…
+
+EFFICIENCY:
+Satisfied constraints:
+— constraint 1
+
+
+……
+Dissatisfied constraints:
+— constraint 1
+— constraint 2
+
+
+
+For a given dimension, say Instruction Following, the total number of constraints are 10. The model has fulfilled 7 of those constraints. Then your justification will look like this: INSTRUCTION FOLLOWING: Satisfied Constraints: Constraint 1 Constraint 2 Constraint 3 Constraint 4 Constraint 5 Constraint 6 Constraint 7 Dissatisfied Constraints: Constraint 1 Constraint 2 Constraint 3 Remember that whatever you write in the justification must exactly match the number of constraints you have chosen
+
+
+Provide me this for above constraints
+Instruction following
+Satisfied Constraints
+Dissatisfied Constraints
+Accuracy
+Satisfied Constraints
+Dissatisfied Constraints
+Efficiency
+Satisfied Constraints
+Dissatisfied Constraints
+
+
+These are the {{Number of constraints}} you will check on each dimension Instruction Following, Accuracy and Efficiency.
+{{Constraints}}

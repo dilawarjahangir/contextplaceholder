@@ -1,0 +1,15 @@
+{
+  "name": "contextplaceholder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently -n \"FRONT,BACK\" -c \"blue,green\" \"npm start --prefix frontend\" \"npm start --prefix backend\""
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

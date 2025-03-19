@@ -1,0 +1,76 @@
+
+
+
+
+Prompt Creation
+
+Conversational Type: 
+Code Authoring (Code Generation): This involves generating code from a text description. By providing details in the prompt, it elicits a response from the model that contains the generated code.
+Code Analysis & Explanation (Analyzing Code): This includes activities such as refactoring, compression, optimization, translation, and precise edits based on a text description. It is required to include the code in the prompt. For example, in refactoring, providing the code to be refactored is mandatory; without it, the purpose of the task is defeated.
+Coding Q&A & Assistance (Talk about Code): This involves general Q&A that doesn't necessarily include code but rather focuses on programming concepts, problem-solving, and solutions.
+Conversational Coding (Multi-turn): This is a mixture of the previous three types, allowing for multi-turn interactions that may involve code generation, analysis, and general coding assistance.
+
+Above is the criteria for writing the prompt of specific types.
+
+
+{{Meta data}}
+
+
+This is my metadata for a task. I need to write a perfect prompt for this metadata. C
+
+
+Conversation type is Code Analysis & Explanation (Analyzing Code). So I need a starting code snippet as well in the prompt.
+
+
+
+
+Example Prompt:
+
+You are tasked with adding a keyboard shortcut for a Save command in a Python-based desktop application using the PyQt5 library. The application should have a simple window with a "File" menu and a "Save" option, which can be triggered both from the menu and using the Ctrl+S keyboard shortcut.
+
+Below is the code example:
+
+import sys
+from PyQt5.QtWidgets import QApplication, QMainWindow, QAction, QMenuBar, QFileDialog, QTextEdit
+
+class TextEditor(QMainWindow):
+    def __init__(self):
+        super().__init__()
+
+        self.init_ui()
+
+    def init_ui(self):
+        self.setWindowTitle("Text Editor")
+        self.setGeometry(100, 100, 600, 400)
+
+        # Text area widget
+        self.text_area = QTextEdit(self)
+        self.setCentralWidget(self.text_area)
+
+        # Create the menu bar
+        menubar = self.menuBar()
+        file_menu = menubar.addMenu('File')
+
+        # Create Save action (without shortcut)
+        save_action = QAction('Save', self)
+        save_action.triggered.connect(self.save_file)
+        file_menu.addAction(save_action)
+
+        self.show()
+
+    def save_file(self):
+        options = QFileDialog.Options()
+        file, _ = QFileDialog.getSaveFileName(self, "Save File", "", "Text Files (*.txt);;All Files (*)", options=options)
+        if file:
+            with open(file, 'w') as f:
+                f.write(self.text_area.toPlainText())
+
+# Main program
+app = QApplication(sys.argv)
+editor = TextEditor()
+
+sys.exit(app.exec_())
+
+
+Task:
+You need to add the 'Ctrl+S' keyboard shortcut for the Save action in the above PyQt5-based text editor application. When the user presses Ctrl+S, it should trigger the save_file function, which saves the content of the text editor to a file.
